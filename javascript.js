@@ -31,6 +31,7 @@ let currentNum = 0;
 let operator = null;
 let display = "0";
 let showingEval = false;
+let steps = 0;
 
 // Init
 updateDisplay(display);
@@ -56,6 +57,7 @@ bttnClear.addEventListener("click", () => {
     currentNum = 0;
     lastNum = 0;
     operator = null;
+    steps = 0;
     updateDisplay(currentNum);
 });
 bttnDel.addEventListener("click", () => {
@@ -69,29 +71,35 @@ bttnEval.addEventListener("click", () => {
 
 // Operator Buttons
 bttnAdd.addEventListener("click", () => {
-    operator = "+";
     numberSwitch();
+    operator = "+";
+    steps += 1;
 });
 bttnSub.addEventListener("click", () => {
-    operator = "-";
     numberSwitch();
+    operator = "-";
+    steps += 1;
 });
 bttnMult.addEventListener("click", () => {
-    operator = "*";
     numberSwitch();
+    operator = "*";
+    steps += 1;
 });
 bttnDiv.addEventListener("click", () => {
-    operator = "/";
     numberSwitch();
+    operator = "/";
+    steps += 1;
 });
 
 // Functions
 function evaluate() {
-    if (operator == null) {
-        console.log("No Operator")
-        return;
-    }
-    currentNum = operate(Number(lastNum), Number(currentNum), operator);
+    if (steps >= 1) {
+        if (operator == null) {
+            console.log("No Operator")
+            return;
+        }
+        currentNum = operate(Number(lastNum), Number(currentNum), operator);
+    };
     updateDisplay(currentNum);
 };
 
@@ -115,6 +123,10 @@ function insertNumber(number) {
 
 function numberSwitch() {
     // Progresses number positions
+    if (!showingEval){
+        evaluate();
+    };
+    
     if (!currentNum == 0) {
             lastNum = currentNum;
             currentNum = 0;
@@ -158,5 +170,6 @@ function log() {
     console.log(`last: ${lastNum}
                 \ncurrent: ${currentNum}
                 \noperator: ${operator}
-                \nshowingLast: ${showingEval}`);
+                \nshowingLast: ${showingEval}
+                \nsteps: ${steps}`);
 };
