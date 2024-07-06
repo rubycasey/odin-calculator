@@ -91,6 +91,66 @@ bttnDiv.addEventListener("click", () => {
     steps += 1;
 });
 
+// Keyboard Input
+window.addEventListener("keydown", function (event) {
+    switch (event.key) {
+        case "1":
+            bttnNum[1].click();
+            break;
+        case "2":
+            bttnNum[2].click();
+            break;
+        case "3":
+            bttnNum[3].click();
+            break;
+        case "4":
+            bttnNum[4].click();
+            break;
+        case "5":
+            bttnNum[5].click();
+            break;
+        case "6":
+            bttnNum[6].click();
+            break;
+        case "7":
+            bttnNum[7].click();
+            break;
+        case "8":
+            bttnNum[8].click();
+            break;
+        case "9":
+            bttnNum[9].click();
+            break;
+        case "0":
+            bttnNum[0].click();
+            break;
+        case "." || "Decimal":
+            bttnDeci.click();
+            break;
+        case "Backspace":
+            bttnDel.click();
+            break;
+        case "Enter":
+            bttnEval.click();
+            break;
+        case "+":
+            bttnAdd.click();
+            break;
+        case "-":
+            bttnSub.click();
+            break;
+        case "*":
+            bttnMult.click();
+            break;
+        case "/":
+            bttnDiv.click();
+            break;
+        case "Escape" || "c":
+            bttnClear.click();
+            break;
+    }
+})
+
 // Functions
 function evaluate() {
     if (steps >= 1) {
