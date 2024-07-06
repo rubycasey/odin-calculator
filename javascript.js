@@ -47,7 +47,7 @@ bttnNum.forEach(function (currentBttn, i) {
     });
 });
 bttnDeci.addEventListener("click", () => {
-        if (!currentNum.includes(".")) {
+        if (!String(currentNum).includes(".")) {
             insertNumber(".");
         };
 });
