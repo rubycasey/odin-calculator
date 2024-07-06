@@ -1,3 +1,13 @@
+* {
+    font-family: Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 48px;
+    margin-bottom: 24px;
+}
+
 #calc-body {
     background-color: #eeeeee;
     width: 400px;
@@ -50,4 +60,25 @@
 } .bttn:active {
     background-color: #202020;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+.bttn-op {
+    background-color: #23a56f;
+    border-color: #088d61;
+} .bttn-op:hover {
+    background-color: #4eb894;
+}
+
+.bttn-func {
+    background-color: #6d6d6d;
+    border-color: #5f5f5f;
+} .bttn-func:hover {
+    background-color: #8a8a8a;
+}
+
+#footer {
+    font-size: 10pt;
+    text-align: center;
+    margin-top: 48px;
+    color: #707070;
 }

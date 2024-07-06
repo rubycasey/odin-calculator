@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Calculator</title>
 </head>
 <body>
@@ -13,25 +14,29 @@
             <p id="display-text">00000</p>
         </div>
         <div id="keypad">
-            <button id="bttn-AC" class="bttn">AC</button>
-            <button id="bttn-del" class="bttn">del</button>
-            <button id="bttn-+" class="bttn">+</button>
-            <button id="bttn--" class="bttn">-</button>
+            <button id="bttn-AC" class="bttn bttn-func">AC</button>
+            <button id="bttn-del" class="bttn bttn-func">del</button>
+            <button id="bttn-+" class="bttn bttn-op">+</button>
+            <button id="bttn--" class="bttn bttn-op">-</button>
             <button id="bttn-7" class="bttn">7</button>
             <button id="bttn-8" class="bttn">8</button>
             <button id="bttn-9" class="bttn">9</button>
-            <button id="bttn-*" class="bttn">X</button>
+            <button id="bttn-*" class="bttn bttn-op">×</button>
             <button id="bttn-4" class="bttn">4</button>
             <button id="bttn-5" class="bttn">5</button>
             <button id="bttn-6" class="bttn">6</button>
-            <button id="bttn-/" class="bttn">÷</button>
+            <button id="bttn-/" class="bttn bttn-op">÷</button>
             <button id="bttn-1" class="bttn">1</button>
             <button id="bttn-2" class="bttn">2</button>
             <button id="bttn-3" class="bttn">3</button>
             <button id="bttn-decimal" class="bttn">.</button>
             <button id="bttn-0" class="bttn">0</button>
-            <button id="bttn-=" class="bttn">=</button>
+            <button id="bttn-=" class="bttn bttn-op">=</button>
         </div>
+    </div>
+    <div id="footer">
+        <p>A simple calculator created for <a href="https://www.theodinproject.com/lessons/foundations-calculator">The Odin Project</a>.</p>
+        <p><a href="https://github.com/rubycasey/odin-calculator">View source code (GitHub)</a></p>
     </div>
     <script src="javascript.js"></script>
 </body>
