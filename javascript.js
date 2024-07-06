@@ -142,6 +142,9 @@ function operate(a, b, op) {
         case "*":
             return (multiply(a, b));
         case "/":
+            if (a == 0 && b == 0) {
+                return `Can't divide 0 by 0 :(`;
+            };
             return (divide(a, b));
         default:
             console.log("Invalid Operator");
